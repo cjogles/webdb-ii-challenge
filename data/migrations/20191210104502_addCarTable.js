@@ -7,7 +7,9 @@ exports.up = function(knex) {
         .notNullable();
       tbl.string('model', 256)
         .notNullable();
-      tbl.integer('VIN').unsigned();
+      tbl.integer('VIN')
+        .unsigned()
+        .notNullable();
       tbl.string('transmission-type', 256);
       tbl.string('title-status', 256);
   })
